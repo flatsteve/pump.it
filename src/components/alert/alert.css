@@ -1,0 +1,10 @@
+.alert {
+  background-color: var(--blue);
+  border-radius: .25rem;
+  display: inline-block;
+  padding: 1.25rem;
+}
+
+.alert__message {
+  margin: 0;
+}

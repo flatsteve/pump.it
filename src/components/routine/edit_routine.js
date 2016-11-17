@@ -1,0 +1,42 @@
+import React, { Component } from 'react';
+import Search from '../search/search';
+
+class EditRoutine extends Component {
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.props.addLabel(this.props.params.day, this.labelInput.value);
+  };
+
+  render() {
+    const routine = this.props.routine[this.props.params.day];
+
+    return (
+      <div>
+        <h1>
+          Edit {routine.fullDayName} routine
+        </h1>
+
+        <form onSubmit={this.handleSubmit}>
+          <div className="form-group">
+            <label className="label">
+              Add a label
+          </label>
+
+            <input defaultValue={routine.label}
+              ref={(labelInput) => this.labelInput = labelInput}
+              className="input" type="text"
+              placeholder="e.g. I hate leg day" />
+          </div>
+
+          <button type="submit" className="button">
+            Save
+          </button>
+        </form>
+
+        <Search day={this.props.params.day} {...this.props} />
+      </div>
+    );
+  }
+}
+
+export default EditRoutine;

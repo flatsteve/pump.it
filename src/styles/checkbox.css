@@ -1,0 +1,41 @@
+.checkbox {
+  margin-right: 1.25rem;
+  text-align: center;
+}
+
+.checkbox__label {
+  cursor: pointer;
+  transition: all .3s ease-in-out;  
+}
+
+.checkbox__label:before {
+  border: .2rem solid var(--pink);
+	border-radius: 50%;
+  display: inline-flex;
+  color: var(--pink);
+  content: '';    
+	height: .8rem;
+  margin: 0 .25rem .25rem 0;
+  text-align: center;
+  width: .8rem;
+  transition: all .3s ease-in-out;
+}
+
+.checkbox__label:hover:before {
+  border-color: var(--blue);
+}
+
+.checkbox__label:hover,
+.checkbox__input:checked + .checkbox__label {
+  color: var(--blue);
+}
+
+.checkbox__input:checked + .checkbox__label:before{
+  background: var(--blue);
+  box-shadow: 0 0 5px var(--blue);
+  border-color: var(--blue);
+}
+
+.checkbox__input { 
+  display: none; 
+}

@@ -1,0 +1,35 @@
+{
+  "name": "pump.io",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://flatsteve.github.io/pump.it",
+  "devDependencies": {
+    "enzyme": "^2.7.0",
+    "eslint": "^3.12.2",
+    "gh-pages": "^0.12.0",
+    "react-addons-test-utils": "^15.4.1",
+    "react-scripts": "0.8.4"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "lodash": "^4.17.2",
+    "normalize.css": "^5.0.0",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "react-redux": "^4.4.6",
+    "react-router": "^3.0.0",
+    "react-router-redux": "^4.0.7",
+    "redux": "^3.6.0",
+    "redux-form": "^6.3.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "npm run build&&gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}

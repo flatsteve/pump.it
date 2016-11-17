@@ -1,0 +1,39 @@
+.app__container {
+  position: relative;
+}
+
+.app {
+  padding: 1.25rem;
+  margin: 0 auto;
+  max-width: 60rem;
+  position: relative;
+  transition: .3s all ease-in-out;
+  transition-delay: .1s;
+  z-index: 99;
+}
+
+.app--menu-open {
+  right: calc(var(--menu-width) - 5rem);
+}
+
+.app:before {
+  background-color: rgba(0,0,0, .5);
+  bottom: 0;
+  content: '';
+  left: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  transition: .3s all ease-in;
+  top: 0;
+  z-index: 999;
+}
+
+.app--menu-open:before {
+  opacity: 1;
+}
+
+.app--menu-closed {
+  right: 0;
+}

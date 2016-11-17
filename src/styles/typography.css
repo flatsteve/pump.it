@@ -1,0 +1,27 @@
+h1,h2,h3,h4,h5 {
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.text__header {
+  color: var(--blue);
+  font-family: 'Codystar', sans-serif;
+  font-weight: bold;
+  letter-spacing: .5rem;
+  text-shadow: 0 0 10px var(--blue);
+}
+
+.text__link {
+  color: var(--pink);
+  text-shadow: 0 0 10px var(--pink);
+  transition: all .3s ease-in-out;
+}
+
+.text__link:hover {
+  color: var(--blue);
+  text-shadow: 0 0 10px var(--blue);
+}

@@ -1,0 +1,13 @@
+.days {
+  margin: 2.5rem 0;
+}
+
+.days__options {
+  align-items: center;
+  display: flex;
+}
+
+.days__checkbox__label {
+  color: var(--pink);
+  text-transform: capitalize;
+}

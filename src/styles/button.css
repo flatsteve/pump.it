@@ -1,0 +1,37 @@
+.button {
+  background-color: var(--pink);
+  border: none;
+  border-radius: .25rem;
+  box-shadow: 0 0 10px var(--pink);
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  min-width: 5rem;
+  padding: .75rem;
+  text-align: center;
+  transition: .3s all ease-in;
+}
+
+.button--circle {
+  border-radius: 50%;
+  height: 2.5rem;
+  line-height: 2.5;
+  min-width: 0;
+  width: 2.5rem;
+}
+
+.button:focus,
+.button:active {
+  outline: none;
+}
+
+.button:hover {
+  background-color: var(--blue);
+  box-shadow: 0 0 10px var(--blue);
+}
+
+.button:disabled {
+  background-color: var(--grey);
+  box-shadow: none;
+  color: var(--black);
+}

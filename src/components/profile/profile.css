@@ -1,0 +1,9 @@
+.profile__form {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 30rem;
+}
+
+.profile__form > .form-group {
+  margin-right: 2.5rem;
+}

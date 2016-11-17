@@ -1,0 +1,23 @@
+@import "~normalize.css/normalize.css";
+@import './styles/typography.css';
+@import './styles/variables.css';
+@import './styles/form.css';
+@import './styles/button.css';
+@import './styles/label.css';
+
+html {
+  background-color: #1E242E;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: #1E242E;
+  background: linear-gradient(to bottom, #000000 , #1E242E);
+  background-repeat: no-repeat;
+  color: #fff;
+  font-family: 'Muli', sans-serif;
+}

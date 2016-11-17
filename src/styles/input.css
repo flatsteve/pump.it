@@ -1,0 +1,26 @@
+.input {
+  background: transparent;
+  border: 2px solid transparent;
+  border-bottom: 2px solid var(--pink);
+  color: var(--blue);
+  padding: .75rem;
+  transition: all 1s ease-in;
+}
+
+.input::placeholder {
+  color: var(--green);
+  font-style: italic;
+  text-shadow: none;
+}
+
+.input:focus {
+  border: 2px solid var(--pink);
+  outline: none;
+  text-shadow: 0 0 10px var(--blue);
+}
+
+.input--select {
+  border: 2px solid var(--pink);
+  height: 2.8rem;
+  min-width: 10rem;
+}

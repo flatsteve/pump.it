@@ -1,0 +1,21 @@
+.routine__item {
+  border: 1px solid var(--blue);
+  margin-right: 1.25rem;
+  padding: 1.25rem;
+  min-height: 20rem;
+  position: relative;
+  min-width: 20rem;
+}
+
+.routine__item__day {
+  color: var(--blue);
+  font-weight: bold;
+  margin-top: 0;
+  text-transform: capitalize;
+}
+
+.routine__edit {
+  bottom: -.75rem;
+  position: absolute;
+  right: -.75rem;
+}
