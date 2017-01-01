@@ -8,27 +8,27 @@
       "type": "image/png"
     },
     {
-      "src": "images/homescreen72.png",
+      "src": "icons/homescreen72.png",
       "sizes": "72x72",
       "type": "image/png"
     },
     {
-      "src": "images/homescreen96.png",
+      "src": "icons/homescreen96.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "images/homescreen144.png",
+      "src": "icons/homescreen144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "images/homescreen168.png",
+      "src": "icons/homescreen168.png",
       "sizes": "168x168",
       "type": "image/png"
     },
     {
-      "src": "images/homescreen192.png",
+      "src": "icons/homescreen192.png",
       "sizes": "192x192",
       "type": "image/png"
     }
