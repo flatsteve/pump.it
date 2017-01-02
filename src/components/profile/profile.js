@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ProfileForm from './form/profile_form';
 import Days from './days/days';
 import Notification from '../notification/notification';
+import PageHeader from '../page_header/page_header';
 
 class Profile extends Component {
   handleSubmit = (values) => {
@@ -16,6 +17,10 @@ class Profile extends Component {
           ref={(notification) => { this.notification = notification; } }>
           Profile updated
         </Notification>
+
+        <PageHeader>
+          Edit profile
+        </PageHeader>
 
         <Days {...this.props} />
 

@@ -24,11 +24,6 @@ const Menu = (props) => {
             Profile
           </Link>
         </li>
-        <li className="menu__item">
-          <span onClick={props.toggleMenu} className="menu__item__link">
-            Sign out
-          </span>
-        </li>
       </ul>
     </div>
   );

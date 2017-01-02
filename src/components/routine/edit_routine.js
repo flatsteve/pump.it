@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Search from '../search/search';
 import Notification from '../notification/notification';
+import PageHeader from '../page_header/page_header';
+import Routine from '../routine/routine';
 
 class EditRoutine extends Component {
   handleSubmit = (event) => {
@@ -19,9 +21,11 @@ class EditRoutine extends Component {
           Label saved
         </Notification>
 
-        <h1>
+        <PageHeader>
           Edit {routine.fullDayName} routine
-        </h1>
+        </PageHeader>
+
+        <Routine routine={routine} day={this.props.params.day} />
 
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">

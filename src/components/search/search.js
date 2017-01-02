@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Exercise from '../exercise/exercise';
 import TextSearch from './text_search';
 import Categories from './categories';
@@ -48,7 +49,16 @@ export class Search extends Component {
 
         <div className="search__results">
           {this.state.results.map((exercise, index) => {
-            return <Exercise readonly={false} index={index} key={exercise.data.id} exercise={exercise.data} day={this.props.day} addExercise={this.props.addExercise} removeExercise={this.removeExercise} />;
+            return (
+              <ReactCSSTransitionGroup
+                transitionName="search__results__item"
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={300}
+                transitionAppear={true}
+                transitionAppearTimeout={500}>
+                <Exercise readonly={false} index={index} key={exercise.data.id} exercise={exercise.data} day={this.props.day} addExercise={this.props.addExercise} removeExercise={this.removeExercise} />
+              </ReactCSSTransitionGroup>
+            );
           })}
         </div>
       </div>
