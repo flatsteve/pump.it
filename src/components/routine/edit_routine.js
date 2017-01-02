@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import Search from '../search/search';
+import Notification from '../notification/notification';
 
 class EditRoutine extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
+    this.notification.show();
     this.props.addLabel(this.props.params.day, this.labelInput.value);
   };
 
@@ -12,6 +14,11 @@ class EditRoutine extends Component {
 
     return (
       <div>
+        <Notification
+          ref={(notification) => { this.notification = notification; } }>
+          Label saved
+        </Notification>
+
         <h1>
           Edit {routine.fullDayName} routine
         </h1>

@@ -16,6 +16,7 @@ class ProfileForm extends Component {
 
   render() {
     const { handleSubmit, pristine, submitting } = this.props;
+
     return (
       <form onSubmit={handleSubmit}>
         <div className="profile__form">
