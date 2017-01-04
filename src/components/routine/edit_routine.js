@@ -25,7 +25,8 @@ class EditRoutine extends Component {
           Edit {routine.fullDayName} routine
         </PageHeader>
 
-        <Routine routine={routine} day={this.props.params.day} />
+        <Routine routine={routine} readonly={false} addable={false}
+          day={this.props.params.day} editable={true} deleteExercise={this.props.deleteExercise} />
 
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">

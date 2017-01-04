@@ -15,16 +15,29 @@ class Routine extends Component {
           {routine.fullDayName}{routine.label ? ': ' + routine.label : null}
         </h4>
 
-        <Link to={`/edit/${day}`} className="button button--circle routine__edit">
-          Edit
-        </Link>
+        {
+          this.props.editable
+            ? <a className="button button--circle routine__edit">
+              Add
+            </a>
+            : (<Link to={`/edit/${day}`}
+              className="button button--circle routine__edit">
+              Edit
+          </Link>)
+        }
 
-        {routine.exercises.length > 0
-          ? routine.exercises.map((exercise) => {
-            return <Exercise key={exercise.id}
-              exercise={exercise} readonly={true} />;
-          })
-          : <Alert>You are puny! Add some exercises you wimp.</Alert>}
+        {
+          routine.exercises.length > 0
+            ? routine.exercises.map((exercise) => {
+              return (
+                <Exercise key={exercise.id} addable={this.props.addable}
+                  exercise={exercise} readonly={this.props.readonly}
+                  editable={this.props.editable} day={this.props.day}
+                  deleteExercise={this.props.deleteExercise} />
+              );
+            })
+            : <Alert>You are puny! Add some exercises you wimp.</Alert>
+        }
       </div>
     );
   }

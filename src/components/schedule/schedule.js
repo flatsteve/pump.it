@@ -25,7 +25,7 @@ class Schedule extends Component {
         {activeRoutines.map((day) => {
           const routine = this.props.routine[day];
 
-          return <Routine routine={routine} day={day} key={day}
+          return <Routine routine={routine} day={day} key={day} readonly={true}
             ref={day} />;
         })}
       </div>

@@ -19,6 +19,15 @@ function routine(state = defaultState.routine, action) {
         state[action.day].exercises.push(action.exercise)
       );
 
+    case 'DELETE_EXERCISE':
+      var newState = Object.assign({}, state);
+      var newExercises = newState[action.day].exercises.filter((exercise) => {
+        return exercise.id !== action.exercise.id;
+      });
+
+      newState[action.day].exercises = newExercises;
+      return newState;
+
     default:
       return state;
   }

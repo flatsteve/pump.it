@@ -8,6 +8,10 @@ class Exercise extends Component {
     this.props.addExercise(this.props.day, exercise);
   }
 
+  handleDelete = (exercise) => {
+    this.props.deleteExercise(this.props.day, exercise);
+  }
+
   render() {
     let exercise = this.props.exercise;
     let exerciseClasses = classNames({
@@ -20,9 +24,17 @@ class Exercise extends Component {
         <p className="exercise__title">{exercise.name}</p>
         <p className="exercise__category">({exercise.category})</p>
 
-        {this.props.readonly
-          ? null
-          : <p onClick={this.handleClick.bind(this, exercise)} className="exercise__action"> Add + </p>
+        {this.props.addable
+          ? <button onClick={this.handleClick.bind(this, exercise)} className="button exercise__action">Add</button>
+          : null
+        }
+
+        {this.props.editable
+          ? <button className="button"
+            onClick={this.handleDelete.bind(this, exercise)}>
+            Delete
+            </button>
+          : null
         }
       </div>
     );

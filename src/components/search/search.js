@@ -55,8 +55,9 @@ export class Search extends Component {
                 transitionEnterTimeout={500}
                 transitionLeaveTimeout={300}
                 transitionAppear={true}
-                transitionAppearTimeout={500}>
-                <Exercise readonly={false} index={index} key={exercise.data.id} exercise={exercise.data} day={this.props.day} addExercise={this.props.addExercise} removeExercise={this.removeExercise} />
+                transitionAppearTimeout={500} key={exercise.data.id}>
+                <Exercise index={index} exercise={exercise.data}
+                  day={this.props.day} addExercise={this.props.addExercise} removeExercise={this.removeExercise} addable={true} />
               </ReactCSSTransitionGroup>
             );
           })}

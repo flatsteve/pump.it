@@ -21,6 +21,14 @@ export function addExercise(day, exercise) {
   };
 }
 
+export function deleteExercise(day, exercise) {
+  return {
+    type: 'DELETE_EXERCISE',
+    day,
+    exercise
+  };
+}
+
 export function updateProfile(profile) {
   return {
     type: 'UPDATE_PROFILE',
