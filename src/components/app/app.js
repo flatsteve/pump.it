@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import Menu from '../menu/menu';
-import AppHeader from '../app_header/app_header';
+import NavBar from '../nav/nav_bar/nav_bar';
 import Footer from '../footer/footer';
 import './app.css';
 
@@ -33,7 +33,10 @@ class App extends Component {
   };
 
   render() {
-    let appClass = classNames('app', this.state.menuOpen ? 'app--menu-open' : 'app--menu-closed');
+    let appClass = classNames({
+      'app': true,
+      'app--menu-open': this.state.menuOpen
+    });
 
     return (
       <div className="app__container">
@@ -41,7 +44,7 @@ class App extends Component {
 
         <div className={appClass}
           onClick={this.closeMenu}>
-          <AppHeader toggleMenu={this.toggleMenu} />
+          <NavBar toggleMenu={this.toggleMenu} />
 
           <div className="app__content">
             {React.cloneElement(this.props.children, this.props)}

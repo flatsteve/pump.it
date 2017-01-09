@@ -3,10 +3,11 @@
 }
 
 .app {
-  padding: 1.25rem;
+  padding: 0 1.25rem 1.25rem;
   margin: 0 auto;
   max-width: 60rem;
   position: relative;
+  right: 0;
   transition: .3s all ease-in-out;
   transition-delay: .1s;
   z-index: 99;
@@ -32,8 +33,9 @@
 
 .app--menu-open:before {
   opacity: 1;
+  pointer-events: all;
 }
 
-.app--menu-closed {
-  right: 0;
+.app__content {
+  padding-top: var(--nav-height);
 }

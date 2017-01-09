@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Routine from '../routine/routine';
+import PageHeader from '../common/page_header/page_header';
 import { getDayOfWeek, scrollToRoutine } from '../../services/utils';
 import './schedule.css';
 
@@ -21,13 +22,19 @@ class Schedule extends Component {
     });
 
     return (
-      <div className="schedule">
-        {activeRoutines.map((day) => {
-          const routine = this.props.routine[day];
+      <div>
+        <PageHeader>
+          Gym Schedule
+        </PageHeader>
 
-          return <Routine routine={routine} day={day} key={day} readonly={true}
-            ref={day} />;
-        })}
+        <div className="schedule">
+          {activeRoutines.map((day) => {
+            const routine = this.props.routine[day];
+
+            return <Routine routine={routine} day={day} key={day} readonly={true}
+              ref={day} />;
+          })}
+        </div>
       </div>
     );
   };

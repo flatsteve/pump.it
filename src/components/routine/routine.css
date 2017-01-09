@@ -19,3 +19,12 @@
   position: absolute;
   right: -.75rem;
 }
+
+.routine__label {
+  align-items: center;
+  display: flex;
+}
+
+.routine__label__button {
+  margin-left: 1.25rem;
+}

@@ -1,0 +1,8 @@
+.close-button {
+  height: 2rem;
+  width: 2rem;
+}
+
+.close-button:hover {
+  cursor: pointer;
+}

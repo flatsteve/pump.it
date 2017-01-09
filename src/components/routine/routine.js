@@ -17,9 +17,10 @@ class Routine extends Component {
 
         {
           this.props.editable
-            ? <a className="button button--circle routine__edit">
+            ? (<a className="button button--circle routine__edit"
+              onClick={this.props.handleToggleSearch}>
               Add
-            </a>
+            </a>)
             : (<Link to={`/edit/${day}`}
               className="button button--circle routine__edit">
               Edit

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
+import CloseButton from '../common/close_button/close_button';
 import './exercise.css';
 
 class Exercise extends Component {
@@ -30,10 +31,8 @@ class Exercise extends Component {
         }
 
         {this.props.editable
-          ? <button className="button"
-            onClick={this.handleDelete.bind(this, exercise)}>
-            Delete
-            </button>
+          ? <CloseButton closeAction={this.handleDelete.bind(this, exercise)}
+            className="exercise__action" />
           : null
         }
       </div>

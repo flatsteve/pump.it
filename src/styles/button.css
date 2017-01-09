@@ -15,7 +15,7 @@
 .button--circle {
   border-radius: 50%;
   height: 2.5rem;
-  line-height: 2.5;
+  line-height: 2.5rem;
   min-width: auto;
   width: 2.5rem;
 }

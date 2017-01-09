@@ -1,3 +1,29 @@
+/* mobile landscape: 30rem; */
+/* small tablet: 48rem; */
+/* iPad landscape: 60rem; */
+
+body {
+  font-size: 85%;
+}
+
+@media (min-width: 30rem) {
+  body {
+    font-size: 90%;
+  }
+}
+
+@media (min-width: 48rem) {
+  body {
+    font-size: 95%;
+  }
+} 
+
+@media (min-width: 60rem) {
+  body {
+    font-size: 100%;
+  }
+}
+
 h1,h2,h3,h4,h5 {
   font-weight: normal;
 }
@@ -24,4 +50,4 @@ a {
 .text__link:hover {
   color: var(--blue);
   text-shadow: 0 0 10px var(--blue);
-}
+} 

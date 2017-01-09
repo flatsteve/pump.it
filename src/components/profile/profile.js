@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ProfileForm from './form/profile_form';
 import Days from './days/days';
 import Notification from '../notification/notification';
-import PageHeader from '../page_header/page_header';
+import PageHeader from '../common/page_header/page_header';
 
 class Profile extends Component {
   handleSubmit = (values) => {

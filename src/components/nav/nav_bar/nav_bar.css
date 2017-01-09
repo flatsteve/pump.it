@@ -1,0 +1,42 @@
+.nav-bar {
+  align-items: center;
+  background-color: var(--navy);
+  border-bottom: 1px solid var(--pink);
+  display: flex;
+  left: 0;
+  justify-content: center;
+  height: var(--nav-height);
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav-bar__title {
+  margin: 0;
+}
+
+.nav-bar__sub-title {
+  line-height: 1.4;
+  margin: 0;
+}
+
+.nav-bar__sub-title:after {
+  background-color: var(--pink);
+  box-shadow: 0 0 10px var(--pink);
+  content: '';
+  display: block;
+  height: 1px;
+  margin-top: 1.25rem;
+  width: 100%;
+}
+
+.nav-bar__menu-icon {
+  position: absolute;
+  right: 0;
+  z-index: 99;
+}
+
+.nav-bar__menu-icon:hover {
+  cursor: pointer;
+}

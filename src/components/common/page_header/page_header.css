@@ -4,7 +4,7 @@
 }
 
 .page-header__title {
-  margin-top: 1.25rem;
+  margin-top: 2.25rem;
 }
 
 .page-header__title:after {
@@ -13,6 +13,6 @@
   content: '';
   display: block;
   height: 1px;
-  margin-top: 1.25rem;
+  margin-top: 2.25rem;
   width: 100%;
 }
