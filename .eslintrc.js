@@ -10,6 +10,7 @@ module.exports = {
   installedESLint: true,
   rules: {
     semi: 2,
-    'comma-dangle': 2
+    'comma-dangle': 2,
+    'eol-last': 2
   }
 };

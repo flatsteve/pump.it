@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import Menu from '../menu/menu';
 import NavBar from '../nav/nav_bar/nav_bar';
 import Footer from '../footer/footer';
+import { getState } from '../../services/api';
 import './app.css';
 
 class App extends Component {
@@ -13,6 +14,13 @@ class App extends Component {
       menuOpen: false
     };
   };
+
+  // TODO figure out how to get state from server better
+  componentWillMount() {
+    getState().then((state) => {
+      this.props.updateState(state);
+    });
+  }
 
   componentWillUpdate() {
     this.closeMenu();

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from './store/store';
-import Connector from './components/connector';
+import Connector from './store/connector';
 import Schedule from './components/schedule/schedule';
 import EditRoutine from './components/routine/edit_routine';
 import Profile from './components/profile/profile';
@@ -18,7 +18,7 @@ function removeScrollClass() {
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
-      <Route path="/" onChange={removeScrollClass} component={Connector}>
+      <Route path="/" component={Connector} onChange={removeScrollClass}>
         <IndexRoute component={Schedule} />
         <Route path="edit/:day" component={EditRoutine} />
         <Route path="profile" component={Profile} />

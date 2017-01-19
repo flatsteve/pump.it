@@ -1,3 +1,10 @@
+export function updateState(state) {
+  return {
+    type: 'UPDATE_STORE',
+    state
+  };
+}
+
 export function toggleDay(day) {
   return {
     type: 'TOGGLE_DAY',
