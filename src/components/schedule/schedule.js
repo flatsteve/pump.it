@@ -10,7 +10,7 @@ class Schedule extends Component {
     const day = getDayOfWeek();
 
     if (this.refs[day]) {
-      const scheduleElem = ReactDOM.findDOMNode(this);
+      const scheduleElem = ReactDOM.findDOMNode(this).getElementsByClassName('schedule')[0];
       const routineElem = ReactDOM.findDOMNode(this.refs[day]);
       scrollToRoutine(scheduleElem, routineElem);
     }
