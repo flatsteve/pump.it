@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import ExerciseSearchResult from '../../../../components/exercise/exercise_search_result';
 import TextSearch from './text_search';
 import Categories from './categories';
-import CloseButton from '../../../../components/close_button/close_button';
+import ActionButton from '../../../../components/action_button/action_button';
 import './search.css';
 import '../../../../styles/input.css';
 
@@ -48,7 +48,7 @@ export class Search extends Component {
 
     return (
       <div className={searchClasses}>
-        <CloseButton closeAction={this.props.handleToggleSearch}
+        <ActionButton closeAction={this.props.handleToggleSearch}
           className="search__close" />
 
         <div className="search__controls">

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CloseButton from '../close_button/close_button';
+import ActionButton from '../action_button/action_button';
 import './exercise.css';
 
 class ExerciseEditable extends Component {
@@ -20,7 +20,7 @@ class ExerciseEditable extends Component {
         <p className="exercise__title">{exercise.name}</p>
         <p className="exercise__category">({exercise.category})</p>
 
-        <CloseButton closeAction={this.handleDelete.bind(this, exercise)}
+        <ActionButton closeAction={this.handleDelete.bind(this, exercise)}
           className="exercise__action" />
       </div>
     );

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ActionButton from '../action_button/action_button';
 import './exercise.css';
 
 class ExerciseSearchResult extends Component {
@@ -19,7 +20,7 @@ class ExerciseSearchResult extends Component {
         <p className="exercise__title">{exercise.name}</p>
         <p className="exercise__category">({exercise.category})</p>
 
-        <button onClick={this.handleClick.bind(this, exercise)} className="button exercise__action">Add</button>
+        <ActionButton closeAction={this.handleClick.bind(this, exercise)} type="add" className="exercise__action" />
       </div>
     );
   }
