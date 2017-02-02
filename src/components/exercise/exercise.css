@@ -14,13 +14,6 @@
   pointer-events: none;
 }
 
-.exercise:hover {
-  border-color: var(--blue);
-  color: var(--blue);
-  cursor: pointer;
-  text-shadow: 0 0 10px var(--blue);
-}
-
 .exercise__title, 
 .exercise__category {
   margin: 0;
@@ -31,7 +24,6 @@
 }
 
 .exercise__action {
-  color: var(--yellow);
   margin: 0 0 0 auto;
   text-shadow: 0 0 10px var(--yellow);
 }

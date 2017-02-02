@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './days.css';
-import '../../../styles/checkbox.css';
+import '../../../../styles/checkbox.css';
 
 class Days extends Component {
   toggleDay = (day) => {

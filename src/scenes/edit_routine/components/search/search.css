@@ -35,6 +35,10 @@
   width: 100%;
 }
 
+.search__controls .form-group {
+  margin-bottom: 0;
+}
+
 .search__results {
   border: 2px solid var(--pink);
   height: 65%;

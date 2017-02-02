@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Search from '../search/search';
-import Notification from '../notification/notification';
-import PageHeader from '../common/page_header/page_header';
-import Routine from '../routine/routine';
+import Search from './components/search/search';
+import Notification from '../../components/notification/notification';
+import PageHeader from '../../components/page_header/page_header';
+import RoutineEdit from '../../components/routine/routine_edit';
 
 class EditRoutine extends Component {
   constructor() {
@@ -60,7 +60,7 @@ class EditRoutine extends Component {
           </button>
         </form>
 
-        <Routine routine={routine} readonly={false} addable={false}
+        <RoutineEdit routine={routine} readonly={false} addable={false}
           day={this.props.params.day} editable={true} deleteExercise={this.props.deleteExercise} handleToggleSearch={this.handleToggleSearch} />
 
         <Search day={this.props.params.day} open={this.state.searchOpen}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Routine from '../routine/routine';
-import PageHeader from '../common/page_header/page_header';
+import Routine from '../../components/routine/routine';
+import PageHeader from '../../components/page_header/page_header';
 import { getDayOfWeek, scrollToRoutine } from '../../services/utils';
 import './schedule.css';
 

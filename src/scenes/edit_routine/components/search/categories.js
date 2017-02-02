@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getCategories } from '../../services/wger';
+import { getCategories } from '../../../../services/wger';
 
 class Categories extends Component {
   constructor() {

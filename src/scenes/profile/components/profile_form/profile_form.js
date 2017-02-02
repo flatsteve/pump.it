@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
-import '../profile.css';
+import '../../profile.css';
 
 class ProfileForm extends Component {
   componentDidMount() {

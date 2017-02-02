@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import Menu from '../menu/menu';
-import NavBar from '../nav/nav_bar/nav_bar';
-import Footer from '../footer/footer';
+import Menu from './components/menu/menu';
+import NavBar from './components/nav_bar/nav_bar';
+import Footer from './components/footer/footer';
 import { getState } from '../../services/api';
 import './app.css';
 

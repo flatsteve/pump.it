@@ -1,8 +1,11 @@
 .close-button {
+  fill: var(--pink);
   height: 2rem;
+  transition: all .3s ease;
   width: 2rem;
 }
 
 .close-button:hover {
   cursor: pointer;
+  fill: var(--blue);
 }

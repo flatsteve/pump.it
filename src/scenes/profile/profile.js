@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import ProfileForm from './form/profile_form';
-import Days from './days/days';
-import Notification from '../notification/notification';
-import PageHeader from '../common/page_header/page_header';
+import ProfileForm from './components/profile_form/profile_form';
+import Days from './components/days/days';
+import Notification from '../../components/notification/notification';
+import PageHeader from '../../components/page_header/page_header';
 
 class Profile extends Component {
   handleSubmit = (values) => {

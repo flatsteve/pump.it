@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { search } from '../../services/wger';
+import { search } from '../../../../services/wger';
 
 class TextSearch extends Component {
 

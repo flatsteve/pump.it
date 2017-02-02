@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import classNames from 'classnames';
-import Exercise from '../exercise/exercise';
+import ExerciseSearchResult from '../../../../components/exercise/exercise_search_result';
 import TextSearch from './text_search';
 import Categories from './categories';
-import CloseButton from '../common/close_button/close_button';
+import CloseButton from '../../../../components/close_button/close_button';
 import './search.css';
-import '../../styles/input.css';
+import '../../../../styles/input.css';
 
 export class Search extends Component {
   constructor() {
@@ -52,10 +52,10 @@ export class Search extends Component {
           className="search__close" />
 
         <div className="search__controls">
-          <Categories categoryChange={this.categoryChange}
+          <TextSearch searchChange={this.searchChange}
             selectedCategory={this.state.selectedCategory} />
 
-          <TextSearch searchChange={this.searchChange}
+          <Categories categoryChange={this.categoryChange}
             selectedCategory={this.state.selectedCategory} />
         </div>
 
@@ -69,8 +69,8 @@ export class Search extends Component {
                   transitionLeaveTimeout={300}
                   transitionAppear={true}
                   transitionAppearTimeout={500} key={exercise.data.id}>
-                  <Exercise index={index} exercise={exercise.data}
-                    day={this.props.day} addExercise={this.props.addExercise} removeExercise={this.removeExercise} addable={true} />
+                  <ExerciseSearchResult index={index} exercise={exercise.data}
+                    day={this.props.day} addExercise={this.props.addExercise} removeExercise={this.removeExercise} />
                 </ReactCSSTransitionGroup>
               );
             })
